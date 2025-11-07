@@ -1,102 +1,212 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trang web đầu tiên của tôi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang cá nhân của tôi</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74b9ff, #a29bfe);
-      color: #2d3436;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f5;
+      color: #333;
+    }
+
+    /* Header */
     header {
-      background-color: #0984e3;
+      background: linear-gradient(90deg, #007bff, #00a8ff);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 60px 20px;
+      background-image: url('https://picsum.photos/1600/400?blur');
+      background-size: cover;
+      background-position: center;
     }
 
+    header h1 {
+      font-size: 40px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Nav */
     nav {
-      background-color: #74b9ff;
+      background-color: #007bff;
       display: flex;
       justify-content: center;
       gap: 30px;
-      padding: 10px 0;
+      padding: 12px 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #ffd700;
     }
 
-    section {
+    /* About section */
+    section.about {
       text-align: center;
       padding: 50px 20px;
+      background-color: white;
+    }
+
+    section.about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #007bff;
+      margin-bottom: 20px;
+    }
+
+    section.about h2 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    section.about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    /* Skills */
+    section.skills {
+      background-color: #f8f9fa;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .skills h2 {
+      color: #007bff;
+      margin-bottom: 30px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .skill {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      min-width: 150px;
+      transition: transform 0.2s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    section.contact {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #007bff;
+      color: white;
+    }
+
+    section.contact h2 {
+      margin-bottom: 20px;
     }
 
     button {
-      background-color: #6c5ce7;
-      color: white;
+      background-color: white;
+      color: #007bff;
       border: none;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 12px 25px;
       border-radius: 8px;
       cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
     }
 
     button:hover {
-      background-color: #341f97;
+      background-color: #ffd700;
+      color: #333;
     }
 
     footer {
-      background-color: #2d3436;
-      color: white;
       text-align: center;
-      padding: 15px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>👋 Chào mừng đến với trang web đầu tiên của tôi</h1>
-    <p>Được tạo bằng HTML, CSS và JavaScript</p>
+    <h1>Xin chào, tôi là Nguyễn Văn A</h1>
+    <p>Lập trình viên web tương lai 🌐 | Yêu công nghệ & sáng tạo 💡</p>
   </header>
 
   <nav>
-    <a href="#">Trang chủ</a>
-    <a href="#">Giới thiệu</a>
-    <a href="#">Dịch vụ</a>
-    <a href="#">Liên hệ</a>
+    <a href="#about">Giới thiệu</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#contact">Liên hệ</a>
   </nav>
 
-  <section>
-    <h2>Xin chào bạn!</h2>
-    <p>Đây là một ví dụ đơn giản về lập trình web trong VS Code.</p>
-    <button onclick="chao()">Nhấn vào tôi 👋</button>
+  <section id="about" class="about">
+    <img src="https://i.pravatar.cc/160" alt="Ảnh cá nhân">
+    <h2>Về tôi</h2>
+    <p>Xin chào! Tôi là sinh viên yêu thích công nghệ, đặc biệt là lập trình web.  
+      Tôi đang học HTML, CSS, và JavaScript để xây dựng những trang web sáng tạo và hữu ích.  
+      Mục tiêu của tôi là trở thành một nhà phát triển web chuyên nghiệp trong tương lai gần.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Kỹ năng của tôi</h2>
+    <div class="skill-list">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Responsive Design</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Liên hệ với tôi</h2>
+    <p>Bạn có thể gửi email cho tôi qua địa chỉ:</p>
+    <p><strong>nguyenvana@example.com</strong></p>
+    <br>
+    <button onclick="lienHe()">Gửi lời chào 👋</button>
   </section>
 
   <footer>
-    &copy; 2025 - Trang web demo của bạn
+    © 2025 - Trang cá nhân của Nguyễn Văn A
   </footer>
 
   <script>
-    function chao() {
-      alert("Xin chào! Cảm ơn bạn đã ghé thăm trang web 💙");
+    function lienHe() {
+      alert("Cảm ơn bạn đã ghé thăm! Hãy gửi mail cho tôi nhé 💌");
     }
   </script>
 </body>
 </html>
+
+
