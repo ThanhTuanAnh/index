@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang web đầu tiên của tôi</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe);
+      color: #2d3436;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0984e3;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #74b9ff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    button {
+      background-color: #6c5ce7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #341f97;
+    }
+
+    footer {
+      background-color: #2d3436;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>👋 Chào mừng đến với trang web đầu tiên của tôi</h1>
+    <p>Được tạo bằng HTML, CSS và JavaScript</p>
+  </header>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Giới thiệu</a>
+    <a href="#">Dịch vụ</a>
+    <a href="#">Liên hệ</a>
+  </nav>
+
+  <section>
+    <h2>Xin chào bạn!</h2>
+    <p>Đây là một ví dụ đơn giản về lập trình web trong VS Code.</p>
+    <button onclick="chao()">Nhấn vào tôi 👋</button>
+  </section>
+
+  <footer>
+    &copy; 2025 - Trang web demo của bạn
+  </footer>
+
+  <script>
+    function chao() {
+      alert("Xin chào! Cảm ơn bạn đã ghé thăm trang web 💙");
+    }
+  </script>
+</body>
+</html>
